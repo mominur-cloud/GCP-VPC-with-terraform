@@ -52,6 +52,13 @@ resource "google_compute_firewall" "allow-http" {
   }
   target_tags = ["http"]
 }
+allow {
+    protocol = "tcp"
+    ports    = ["22"]
+  }
+  target_tags = ["ftp"]
+}
+
 # allow https traffic
 resource "google_compute_firewall" "allow-https" {
   name    = "${var.name}-fw-allow-https"
