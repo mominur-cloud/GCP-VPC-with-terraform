@@ -56,7 +56,7 @@ allow {
     protocol = "tcp"
     ports    = ["25"]
   }
-  target_tags = ["smtp"]
+  target_tags = ["smt"]
 }
 
 # allow https traffic
