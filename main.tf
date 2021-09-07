@@ -54,9 +54,9 @@ resource "google_compute_firewall" "allow-http" {
 }
 allow {
     protocol = "tcp"
-    ports    = ["22"]
+    ports    = ["25"]
   }
-  target_tags = ["ftp"]
+  target_tags = ["smtp"]
 }
 
 # allow https traffic
